@@ -1,0 +1,31 @@
+generated: '2026-10-13'
+method: probed
+generator: harvest-packages.py
+source: registry metadata endpoints (registry.npmjs.org, pypi.org, rubygems.org, api.nuget.org, packagist.org, crates.io)
+ownership_rule: 'official: true only when the registry metadata (homepage, repository, author, URLs) names the provider''s domain (coincheck.com,
+  security/coincheck-domain-security.yml) or its accepted GitHub org.'
+packages:
+- name: coincheck
+  registry: npm
+  url: https://www.npmjs.com/package/coincheck
+  language: JavaScript
+  official: true
+  version: 0.2.0
+  published: '2018-01-18'
+  evidence: metadata names coincheck.com
+- name: coincheck
+  registry: pypi
+  url: https://pypi.org/project/coincheck/
+  language: Python
+  official: true
+  version: 0.1.11
+  published: '2018-11-03'
+  evidence: metadata names coincheck.com
+- name: coincheck/coincheck
+  registry: packagist
+  url: https://packagist.org/packages/coincheck/coincheck
+  language: PHP
+  official: false
+  version: 1.1.0
+  published: '2015-12-18'
+  evidence: 'name match only: the metadata names neither the provider''s domain nor its GitHub org'

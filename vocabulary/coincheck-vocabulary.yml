@@ -1,0 +1,20 @@
+generated: '2026-10-13'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/coincheck-exchange-api-openapi.yml
+vocabulary:
+  name: Coincheck Domain Vocabulary
+  description: 'Terms declared by Coincheck''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-13'
+  terms:
+  - term: Public
+    definition: Unauthenticated market data
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/coincheck-exchange-api-openapi.yml
+  - term: Private
+    definition: Authenticated account and trading
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/coincheck-exchange-api-openapi.yml

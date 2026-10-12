@@ -1,0 +1,91 @@
+generated: '2026-10-13'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 7
+  own: 7
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - other
+  - website
+hosts:
+- host: api.coincheck.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: coincheck.com
+  role: api
+  relation: own
+- host: assets.coincheck.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: coincheck.com
+  role: other
+  relation: own
+- host: campaign.coincheck.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: coincheck.com
+  role: other
+  relation: own
+- host: coincheck.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Website
+  - Documentation
+  serves:
+  - api
+  - docs
+  registrable_domain: coincheck.com
+  role: website
+  relation: own
+- host: corporate.coincheck.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: coincheck.com
+  role: other
+  relation: own
+- host: faq.coincheck.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: coincheck.com
+  role: other
+  relation: own
+- host: service.coincheck.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: coincheck.com
+  role: other
+  relation: own

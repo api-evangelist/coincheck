@@ -1,0 +1,135 @@
+generated: '2026-10-13'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/_ae-authored/coincheck-exchange-api-openapi.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: 'No MCP server was found. The pre-flight posted tools/list to /mcp on api.coincheck.com, coincheck.com, assets.coincheck.com, campaign.coincheck.com;
+  verdict opaque (https://assets.coincheck.com/mcp answered 403: the edge authenticates before it routes, which proves nothing either way). Candidate
+  tools below are derived from the 24 operation(s) in the provider''s own OpenAPI (24 listed); they describe what a server WOULD expose, not one
+  that exists.'
+tools:
+- name: ticker
+  operationId: ticker
+  method: GET
+  path: /api/ticker
+  description: Ticker
+- name: public_trades
+  operationId: public_trades
+  method: GET
+  path: /api/trades
+  description: Public trades
+- name: order_book
+  operationId: order_book
+  method: GET
+  path: /api/order_books
+  description: Order book
+- name: calculate_rate
+  operationId: calculate_rate
+  method: GET
+  path: /api/exchange/orders/rate
+  description: Calculate rate
+- name: standard_rate
+  operationId: standard_rate
+  method: GET
+  path: /api/rate/{pair}
+  description: Standard rate
+- name: exchange_status
+  operationId: exchange_status
+  method: GET
+  path: /api/exchange_status
+  description: Exchange status
+- name: create_order
+  operationId: create_order
+  method: POST
+  path: /api/exchange/orders
+  description: Create order
+- name: get_order
+  operationId: get_order
+  method: GET
+  path: /api/exchange/orders/{id}
+  description: Get order
+- name: cancel_order
+  operationId: cancel_order
+  method: DELETE
+  path: /api/exchange/orders/{id}
+  description: Cancel order
+- name: unsettled_orders
+  operationId: unsettled_orders
+  method: GET
+  path: /api/exchange/orders/opens
+  description: Unsettled orders
+- name: order_cancellation_status
+  operationId: order_cancellation_status
+  method: GET
+  path: /api/exchange/orders/cancel_status
+  description: Order cancellation status
+- name: transaction_history
+  operationId: transaction_history
+  method: GET
+  path: /api/exchange/orders/transactions
+  description: Transaction history
+- name: transaction_history_paginated
+  operationId: transaction_history_paginated
+  method: GET
+  path: /api/exchange/orders/transactions_pagination
+  description: Transaction history (paginated)
+- name: balance
+  operationId: balance
+  method: GET
+  path: /api/accounts/balance
+  description: Balance
+- name: send_crypto
+  operationId: send_crypto
+  method: POST
+  path: /api/send_money
+  description: Send crypto
+- name: sending_history
+  operationId: sending_history
+  method: GET
+  path: /api/send_money
+  description: Sending history
+- name: deposit_history
+  operationId: deposit_history
+  method: GET
+  path: /api/deposit_money
+  description: Deposit history
+- name: account_information
+  operationId: account_information
+  method: GET
+  path: /api/accounts
+  description: Account information
+- name: list_bank_accounts
+  operationId: list_bank_accounts
+  method: GET
+  path: /api/bank_accounts
+  description: List bank accounts
+- name: register_bank_account
+  operationId: register_bank_account
+  method: POST
+  path: /api/bank_accounts
+  description: Register bank account
+- name: delete_bank_account
+  operationId: delete_bank_account
+  method: DELETE
+  path: /api/bank_accounts/{id}
+  description: Delete bank account
+- name: withdrawal_history
+  operationId: withdrawal_history
+  method: GET
+  path: /api/withdraws
+  description: Withdrawal history
+- name: create_withdrawal
+  operationId: create_withdrawal
+  method: POST
+  path: /api/withdraws
+  description: Create withdrawal
+- name: cancel_withdrawal
+  operationId: cancel_withdrawal
+  method: DELETE
+  path: /api/withdraws/{id}
+  description: Cancel withdrawal

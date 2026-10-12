@@ -1,23 +1,96 @@
 aid: coincheck
+
 name: Coincheck
-description: 'Coincheck is a company surfaced via the API Evangelist harvest backlog (source: market-gap)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://coincheck.com/images/ogp/coincheck_ogp_large.png
+
+description: Coincheck is a Japanese cryptocurrency exchange. It documents a REST
+  Exchange API (public market data plus HMAC-signed private trading, account, deposit
+  and withdrawal endpoints) and WebSocket market feeds.
+
 url: https://raw.githubusercontent.com/api-evangelist/coincheck/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:market-gap
+
 x-tier: stub
+
 x-tier-reason: harvest
+
 specificationVersion: '0.20'
+
 created: '2026-10-13'
+
 modified: '2026-10-13'
+
 tags:
 - Company
-apis: []
+- Cryptocurrency
+- Exchange
+- Trading
+- Japan
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Spectral
+  url: rules/coincheck-rules.yml
+- type: Vocabulary
+  url: vocabulary/coincheck-vocabulary.yml
+- type: Conformance
+  url: conformance/coincheck-conformance.yml
+- type: Hosts
+  url: hosts/coincheck-hosts.yml
+- type: Vendors
+  url: vendors/coincheck-vendors.yml
+- type: SDKs
+  url: packages/coincheck-packages.yml
+- type: Packages
+  url: packages/coincheck-packages.yml
+- type: TermsOfService
+  url: https://coincheck.com/info/terms
+- type: Newsroom
+  url: https://corporate.coincheck.com/news
+- type: Login
+  url: https://coincheck.com/sessions/signin
+- type: DomainSecurity
+  url: security/coincheck-domain-security.yml
 - type: Website
   url: https://coincheck.com
+- type: Documentation
+  url: https://coincheck.com/documents/exchange/api
+
+apis:
+- aid: coincheck:exchange-api
+  name: Coincheck Exchange API
+  description: REST API for Coincheck market data, orders, balances, transfers and
+    withdrawals.
+  humanURL: https://coincheck.com/documents/exchange/api
+  baseURL: https://coincheck.com/api
+  tags:
+  - Cryptocurrency
+  - Trading
+  properties:
+  - type: Documentation
+    url: https://coincheck.com/documents/exchange/api
+  - type: OpenAPI
+    url: openapi/_ae-authored/coincheck-exchange-api-openapi.yml
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-13'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://assets.coincheck.com/mcp
+    status: 403
+  - url: https://coincheck.com
+    status: 200
