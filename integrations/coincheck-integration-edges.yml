@@ -40,7 +40,7 @@ edges:
   evidence: https://api.coingecko.com/api/v3/exchanges/coincheck
   matched_by: domain:coincheck.com
   coingecko_id: coincheck
-  trust_score: 7
+  trust_score: 5
   detected_by: sweep-crypto.py
   first_seen: '2026-10-13'
 templates: []
