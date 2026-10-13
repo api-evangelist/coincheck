@@ -49,22 +49,29 @@ hosts:
   - probed
   - contract-discovery
   - well-known
+  - vendor-detect
   types:
+  - TermsOfService
+  - Login
   - Website
   - Documentation
   serves:
   - api
   - docs
+  - cdn
+  vendor: cloudfront
   registrable_domain: coincheck.com
   role: website
   relation: own
 - host: corporate.coincheck.com
   found_by:
+  - pointer
   - probed
   - site-links
   - contract-discovery
   - well-known
-  types: []
+  types:
+  - Newsroom
   serves: []
   registrable_domain: coincheck.com
   role: other

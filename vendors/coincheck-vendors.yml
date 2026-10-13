@@ -34,6 +34,7 @@ reliance:
     cannot tell those apart
 checked:
 - 'docs-platform: no-docs-host'
+- coincheck.com (Login)
 - coincheck.com (Website)
 - coincheck.com (Documentation)
 - coincheck.com (baseURL)
