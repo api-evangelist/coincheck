@@ -66,21 +66,30 @@ common:
   url: https://coincheck.com/documents/exchange/api
 
 apis:
-- aid: coincheck:exchange-api
-  name: Coincheck Exchange API
-  description: REST API for Coincheck market data, orders, balances, transfers and
-    withdrawals.
+- aid: coincheck:coincheck-private-api
+  name: Coincheck Private API
+  description: Authenticated account and trading
   humanURL: https://coincheck.com/documents/exchange/api
   baseURL: https://coincheck.com/api
   tags:
-  - Cryptocurrency
-  - Trading
+  - Private
   properties:
+  - type: OpenAPI
+    url: openapi/coincheck-private-api-openapi.yml
   - type: Documentation
     url: https://coincheck.com/documents/exchange/api
+- aid: coincheck:coincheck-public-api
+  name: Coincheck Public API
+  description: Unauthenticated market data
+  humanURL: https://coincheck.com/documents/exchange/api
+  baseURL: https://coincheck.com/api
+  tags:
+  - Public
+  properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/coincheck-exchange-api-openapi.yml
-
+    url: openapi/coincheck-public-api-openapi.yml
+  - type: Documentation
+    url: https://coincheck.com/documents/exchange/api
 x-coverage:
   state: none
   reason: no-developer-program
